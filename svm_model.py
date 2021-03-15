@@ -2,9 +2,8 @@ import pandas as pd
 import numpy as np
 import sklearn
 from sklearn import datasets, svm, metrics
-from sklearn.neighbors import KNeighborsClassifier
 
-data = pd.read_csv("temp-data.csv", sep=",")
+data = pd.read_csv("temp-data.csv")
 
 predict = "temp"
 
