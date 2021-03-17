@@ -26,4 +26,4 @@
 #### Now move the the "temp-data.csv" file to the directory where you have cloned this repository.
 ## Does SVM perform good?
 #### It's pretty fast. Most times the accuracy is larger than 0.98/1.0
-## Please report all bugs and issues you have!
+## Please report all bugs and issues you have! 
