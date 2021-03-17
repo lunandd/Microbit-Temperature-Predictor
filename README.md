@@ -23,7 +23,9 @@
 #### If thats the case copy the correct separator and paste it in the place of the incorrect separator.
 #### Now all the seperators are correct and the script should work
 ![Screenshot8](screenshots/screenshot8.png)
-#### Now move the the "temp-data.csv" file to the directory where you have cloned this repository.
+#### Now move the the CSV file to the directory where you have cloned this repository.
+#### Run ```pip3 install -r requirements.txt``` if you're on Linux or MacOS and ```pip install -r requirements.txt``` if you're on Windows
+#### After that run the script
 ## Does SVM perform good?
 #### It's pretty fast. Most times the accuracy is larger than 0.98/1.0
 ## Please report all bugs and issues you have! 
