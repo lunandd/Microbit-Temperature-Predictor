@@ -8,19 +8,27 @@ import sys
 special_delimiters = {
     "space": " ",
     "tab": "\t",
-    "tab2": "\t\t"
+    "tab2": "\t\t",
+    "semicolon": ";",
+    "comma": ",",
+    "pipe": "|",
+    "colon": ":"
 }
-# Command line arguments are experimental and not complete yet. They mostly don't work
-# and shouldn't be used until they're decent
+
+# Command line arguments are decent now and should be used
 for i in range(2, 5):
-    if len(sys.argv) < 3:
+    if len(sys.argv) - 1 == 1:
+        if sys.argv[1] == "-help":
+            print("""python3 svm_model.py -args [file name] [delimiter] [y column]if you're on Linux or MacOS and 
+            python svm_model.py -args [file name] [delimiter] [y column] if you're on Windows""")
+            exit()
+    elif len(sys.argv) < 3:
         print("No arguments supplied, will use the input function")
         file_name = str(input("What's the name of the file that contains the temperature data of your micro:bit?\n"))
-        delimiter = str(input("What's the delimiter of your file?\n"))
+        delimiter = str(input("What's the delimiter that is used?\n"))
         predict = str(input("Name of the y column?\n"))
         break
-    elif sys.argv[1] == "-args" and sys.argv[i] != None:
-        print("Arguments will be used")
+    elif sys.argv[1] == "-args":
         file_name = sys.argv[2]
         delimiter = sys.argv[3]
         predict = sys.argv[4]
@@ -30,7 +38,7 @@ for i in range(2, 5):
     else:
         continue
 
-data = pd.read_csv(file_name, sep=delimiter, encoding="ascii")
+data = pd.read_csv(file_name, sep=delimiter)
 
 X = np.array(data.drop([predict], 1))
 y = np.array(data[predict])

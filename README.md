@@ -1,7 +1,12 @@
 # Micro:bit Temperature Predictor
 ## What does this projects do?
 #### Using a machine learning algorithm known as SVM ("Support Vector Machine"), it predicts the temperature of a micro:bit's CPU using it's previously recorded temperature in a CSV file.
-## How could I use this project myself?
+## How do I setup my environment to be able to use this project?
+#### First clone this repo using ```git clone https://github.com/Pavlos-Efstathiou/Microbit-Temperature-Predictor```
+#### After that run ```pip3 install -r requirements.txt``` if you're on Linux or MacOS and ```pip install -r requirements.txt``` if you're on Windows
+#### And to run the script run ```python3 svm_model.py``` if you're on Linux or MacOS and ```python svm_model.py``` if you're on Windows
+#### You could also use command line arguments by running this command ```python3 svm_model.py -args [file name] [delimiter] [y column]``` if you're on Linux or MacOS and ```python svm_model.py -args [file name] [delimiter] [y column]``` if you're on Windows
+## How could I gather data from my own micro:bit?
 #### Visit this [URL](https://makecode.microbit.org/_abfUWEMs3U88) and plug your micro:bit to your computer.
 #### Now flash the code to your micro:bit by pressing the "Download" button on the bottom of the page.
 ![Screenshot1](screenshots/screenshot1.png)
@@ -17,15 +22,13 @@
 ![Screenshot6](screenshots/screenshot6.png)
 #### **This is the most important step**. Delete the first line. The second line (now the first line) should look like this "time temp". Heres how the first line should look like:
 ![Screenshot9](screenshots/screenshot9.png)
-#### It's possible that the first line uses a space while the other lines use a tab or another separator. If that's the case replace it. Because if you don't you will encounter an error
+#### It's possible that the first line uses a space while the other lines use a tab or another delimiter. If that's the case replace it. Because if you don't you will encounter an error
 #### Example:
 ![Screenshot7](screenshots/screenshot7.png)
-#### If thats the case copy the correct separator and paste it in the place of the incorrect separator.
+#### If thats the case copy the correct delimiter and paste it in the place of the incorrect delimiter.
 #### Now all the seperators are correct and the script should work
 ![Screenshot8](screenshots/screenshot8.png)
 #### Now move the the CSV file to the directory where you have cloned this repository.
-#### Run ```pip3 install -r requirements.txt``` if you're on Linux or MacOS and ```pip install -r requirements.txt``` if you're on Windows
-#### After that run the script
 ## Does SVM perform good?
 #### It's pretty fast. Most times the accuracy is larger than 0.98/1.0
 ## Please report all bugs and issues you have! 
