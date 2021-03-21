@@ -1,5 +1,4 @@
 from sklearn import svm, metrics
-import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
 import sklearn
@@ -54,7 +53,7 @@ def main():
 
     accuracy = metrics.accuracy_score(y_test, y_pred)
 
-    print(f"Accuracy: {accuracy}/1.0\nPredictions: {y_pred}\n")
+    print(f"Accuracy: {accuracy}/1.0\nPredictions: {y_pred}")
     print(f"Average Temperature: {np.mean(y_pred)}")
 
 if __name__ == "__main__":
